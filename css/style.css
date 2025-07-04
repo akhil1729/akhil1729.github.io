@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 60px;
+  text-align: center;
+}
+
+#home {
+  background: #333;
+  color: white;
+  padding: 100px 20px;
+}
+
+.skill {
+  margin: 10px 0;
+}
+
+.bar {
+  height: 10px;
+  background: lightgray;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.bar.html { background: orange; width: 90%; }
+.bar.css { background: blue; width: 80%; }
+.bar.js { background: yellow; width: 70%; }
+
+.project-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.project-card img {
+  max-width: 300px;
+  height: auto;
+}
