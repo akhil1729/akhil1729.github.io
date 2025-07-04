@@ -1,43 +1,136 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  background: #0e0e0e;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #fff;
+  width: 0;
+  animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
+/* Sections */
 section {
-  padding: 60px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-#home {
-  background: #333;
-  color: white;
-  padding: 100px 20px;
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  margin: 20px 0;
+  box-shadow: 0 0 20px #fff;
 }
 
 .skill {
-  margin: 10px 0;
+  margin: 10px auto;
+  width: 80%;
 }
 
 .bar {
   height: 10px;
-  background: lightgray;
-  width: 50%;
-  margin: 0 auto;
+  background: #555;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.bar.html { background: orange; width: 90%; }
-.bar.css { background: blue; width: 80%; }
-.bar.js { background: yellow; width: 70%; }
+.bar.html { background: linear-gradient(90deg, orange 90%, #555 90%); }
+.bar.css { background: linear-gradient(90deg, cyan 80%, #555 80%); }
+.bar.js { background: linear-gradient(90deg, yellow 70%, #555 70%); }
 
 .project-card {
-  border: 1px solid #ccc;
-  padding: 10px;
   display: inline-block;
+  background: #222;
+  border-radius: 10px;
   margin: 10px;
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card img {
-  max-width: 300px;
-  height: auto;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* Contact links */
+#contact a {
+  color: cyan;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
 }
